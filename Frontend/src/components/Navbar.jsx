@@ -27,7 +27,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Optionally, call your backend to invalidate the session
-      await fetch("http://localhost:5001/api/auth/logout", {
+      await fetch("https://expaper.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });
