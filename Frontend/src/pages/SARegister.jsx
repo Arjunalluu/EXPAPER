@@ -16,7 +16,7 @@ const SARegister = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/auth/SAregister",
+        "https://expaper.onrender.com/api/auth/SAregister",
         data
       );
       const result = response.data;
