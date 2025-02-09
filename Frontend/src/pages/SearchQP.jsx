@@ -34,7 +34,7 @@ const SearchQP = () => {
       }).toString();
 
       const response = await fetch(
-        `http://localhost:5001/api/QPs/download?${queryParams}`,
+        `https://expaper.onrender.com/api/QPs/download?${queryParams}`,
         { method: "GET" }
       );
 
