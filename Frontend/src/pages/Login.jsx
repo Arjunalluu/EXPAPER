@@ -23,10 +23,10 @@ const Login = () => {
 
     // Determine the URL based on role selection
     if (roleLower === "superadmin") {
-      url = "http://localhost:5001/api/auth/SAlogin";
+      url = "https://expaper.onrender.com/api/auth/SAlogin";
     } else if (roleLower === "admin") {
       // Change this endpoint if your admin login URL is different.
-      url = "http://localhost:5001/api/auth/Alogin";
+      url = "https://expaper.onrender.com/api/auth/Alogin";
     }
 
     try {
