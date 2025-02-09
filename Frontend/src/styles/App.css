@@ -1,0 +1,49 @@
+/* App.css */
+:root {
+  --bg-color: #121212;           /* Dark background */
+  --text-color: #e0e0e0;           /* Light text for contrast */
+  --primary-color: #bb86fc;        /* Royal purple */
+  --secondary-color: #03dac6;      /* Teal accent */
+  --accent-color: #3700b3;         /* Deep royal accent */
+  --navbar-height: 60px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  transition: background var(--transition-speed), color var(--transition-speed);
+  overflow-x: hidden;
+}
+
+/* Main container below fixed navbar */
+.container {
+  padding: calc(var(--navbar-height) + 20px) 2rem 2rem;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: calc(var(--navbar-height) + 10px) 1rem 2rem;
+  }
+}

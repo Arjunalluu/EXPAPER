@@ -1,0 +1,112 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(18, 18, 18, 0.95);
+  padding: 0 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  animation: slideIn 0.5s ease-out;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width var(--transition-speed);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Style logout button to look like links */
+.navbar button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.navbar button:hover {
+  color: var(--primary-color);
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width var(--transition-speed);
+}
+
+.navbar button:hover::after {
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    height: auto;
+  }
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

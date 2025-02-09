@@ -1,0 +1,79 @@
+/* SearchQP.css */
+.searchqp-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.searchqp-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.searchqp-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.searchqp-container label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.searchqp-container input[type="text"] {
+  padding: 0.8rem;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #2c2c2c;
+  color: var(--text-color);
+  transition: border-color var(--transition-speed), background var(--transition-speed);
+}
+
+.searchqp-container input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: #3a3a3a;
+}
+
+.searchqp-container button {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.searchqp-container button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .searchqp-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
