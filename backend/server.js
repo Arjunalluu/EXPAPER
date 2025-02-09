@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Configure CORS options to allow credentials and set the allowed origin
 const corsOptions = {
-  origin: 'http://localhost:5001', // Adjust this to your frontend's URL
+  origin: 'https://expaper.onrender.com', // Adjust this to your frontend's URL
   credentials: true,               // Allow credentials (cookies, authorization headers, etc.)
 };
 
