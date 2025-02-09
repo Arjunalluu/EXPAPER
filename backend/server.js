@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Configure CORS options to allow credentials and set the allowed origin
 const corsOptions = {
-  origin: 'http://localhost:5173', // Adjust this to your frontend's URL
+  origin: 'http://localhost:5001', // Adjust this to your frontend's URL
   credentials: true,               // Allow credentials (cookies, authorization headers, etc.)
 };
 
@@ -25,9 +25,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/QPs', QProute);
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/frontend/dist')));
+  app.use(express.static(path.join(__dirname, '/Frontend/dist')));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'Frontend', 'dist', 'index.html'));
     ;
     })
   }
