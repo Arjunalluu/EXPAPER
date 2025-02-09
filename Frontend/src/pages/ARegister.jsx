@@ -30,7 +30,7 @@ const Aregister = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5001/api/auth/Aregister", formData);
+      const response = await axios.post("https://expaper.onrender.com/api/auth/Aregister", formData);
       const result = response.data;
       if (response.status === 201) {
         toast.success(result.message || "Admin registered successfully!");
