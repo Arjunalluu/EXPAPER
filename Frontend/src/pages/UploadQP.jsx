@@ -39,7 +39,7 @@ const UploadQP = () => {
       data.append("subject", formData.subject);
       data.append("file", file);
 
-      const response = await fetch("http://localhost:5001/api/QPs/upload", {
+      const response = await fetch("https://expaper.onrender.com/api/QPs/upload", {
         method: "POST",
         // No Authorization header is needed now.
         body: data,
